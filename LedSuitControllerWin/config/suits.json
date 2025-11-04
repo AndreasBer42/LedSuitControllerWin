@@ -1,0 +1,66 @@
+[
+    {
+        "color": {
+            "green": false,
+            "red": true
+        },
+        "ip": "",
+        "name": "Jeff"
+    },
+    {
+        "color": {
+            "green": false,
+            "red": true
+        },
+        "ip": "",
+        "name": "Resu"
+    },
+    {
+        "color": {
+            "green": false,
+            "red": true
+        },
+        "ip": "",
+        "name": "Suit 3"
+    },
+    {
+        "color": {
+            "green": false,
+            "red": true
+        },
+        "ip": "",
+        "name": "Suit 4"
+    },
+    {
+        "color": {
+            "green": false,
+            "red": true
+        },
+        "ip": "",
+        "name": "Suit 5"
+    },
+    {
+        "color": {
+            "green": false,
+            "red": true
+        },
+        "ip": "",
+        "name": "Suit 6"
+    },
+    {
+        "color": {
+            "green": false,
+            "red": true
+        },
+        "ip": "",
+        "name": "Suit 7"
+    },
+    {
+        "color": {
+            "green": false,
+            "red": true
+        },
+        "ip": "",
+        "name": "Suit 8"
+    }
+]

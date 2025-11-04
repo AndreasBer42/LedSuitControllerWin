@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CA9109AA-258D-4EC0-B1F8-526B116F75C7}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>6.10.0_msvc2022_64</QtInstall>
+    <QtModules>core;gui;widgets;network;svg;svgwidgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>6.10.0_msvc2022_64</QtInstall>
+    <QtModules>core;gui;widgets;network;svg;svgwidgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+    <VcpkgTriplet>x64-windows</VcpkgTriplet>
+    <VcpkgManifestRoot>$(MSBuildProjectDirectory)</VcpkgManifestRoot>
+    <VcpkgRoot>C:\vcpkg</VcpkgRoot>
+    <!-- make it explicit -->
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)\vcpkg_installed\x64-windows\include</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ConfigUtils.cpp" />
+    <ClCompile Include="src\core\AudioPlayer.cpp" />
+    <ClCompile Include="src\core\AudioPreprocessor.cpp" />
+    <ClCompile Include="src\core\JSONHandler.cpp" />
+    <ClCompile Include="src\core\TcpClient.cpp" />
+    <ClCompile Include="src\core\Timeline.cpp" />
+    <ClCompile Include="src\core\WaypointCompressor.cpp" />
+    <ClCompile Include="src\core\WaypointSerializer.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ui\LedSuitPictogram.cpp" />
+    <ClCompile Include="src\ui\MainWindow.cpp" />
+    <ClCompile Include="src\ui\Preset.cpp" />
+    <ClCompile Include="src\ui\PresetManager.cpp" />
+    <ClCompile Include="src\ui\SettingsDialog.cpp" />
+    <ClCompile Include="src\ui\SpectrogramView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="include\core\AudioPlayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\config.h" />
+    <ClInclude Include="include\ConfigUtils.h" />
+    <ClInclude Include="include\core\AudioPreprocessor.h" />
+    <ClInclude Include="include\core\JSONHandler.h" />
+    <ClInclude Include="include\core\SuitState.h" />
+    <ClInclude Include="include\core\Timeline.h" />
+    <ClInclude Include="include\core\WaypointCompressor.h" />
+    <ClInclude Include="include\core\WaypointSerializer.h" />
+    <ClInclude Include="include\fftw3\fftw3.h" />
+    <ClInclude Include="include\libsndfile\sndfile.h" />
+    <ClInclude Include="include\libsndfile\sndfile.hh" />
+    <ClInclude Include="include\nlohmann\json.hpp" />
+    <ClInclude Include="include\portaudio\pa_asio.h" />
+    <ClInclude Include="include\portaudio\pa_jack.h" />
+    <ClInclude Include="include\portaudio\pa_linux_alsa.h" />
+    <ClInclude Include="include\portaudio\pa_mac_core.h" />
+    <ClInclude Include="include\portaudio\pa_win_ds.h" />
+    <ClInclude Include="include\portaudio\pa_win_wasapi.h" />
+    <ClInclude Include="include\portaudio\pa_win_waveformat.h" />
+    <ClInclude Include="include\portaudio\pa_win_wdmks.h" />
+    <ClInclude Include="include\portaudio\pa_win_wmme.h" />
+    <ClInclude Include="include\portaudio\portaudio.h" />
+    <ClInclude Include="include\ui\Preset.h" />
+    <ClInclude Include="include\ui\PresetManager.h" />
+    <ClInclude Include="include\utils.h" />
+    <QtMoc Include="include\ui\SpectrogramView.h" />
+    <QtMoc Include="include\ui\SettingsDialog.h" />
+    <QtMoc Include="include\ui\MainWindow.h" />
+    <QtMoc Include="include\ui\LedSuitPictogram.h" />
+    <QtMoc Include="include\core\TcpClient.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\icons\man.svg" />
+    <None Include="resources\metronomSuit1.json" />
+    <None Include="resources\netronomAllHeads.json" />
+    <None Include="resources\presets.json" />
+    <None Include="resources\spectrogram_techno new.csv" />
+    <None Include="resources\spectrogram_techno.csv" />
+    <None Include="vcpkg.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resources\mono_test_audio.wav" />
+    <Media Include="resources\mono_test_audio_1000Hz.wav" />
+    <Media Include="resources\mono_test_audio_metronom.wav" />
+    <Media Include="resources\mono_test_audio_moon.wav" />
+    <Media Include="resources\mono_test_audio_survive.wav" />
+    <Media Include="resources\output.wav" />
+    <Media Include="resources\test_audio.wav" />
+    <Media Include="resources\test_audio_techno.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="resources\resources.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\icons\AddWaypoint.png" />
+    <Image Include="resources\icons\Bin.png" />
+    <Image Include="resources\icons\DeleteWaypoint.png" />
+    <Image Include="resources\icons\Distribute.png" />
+    <Image Include="resources\icons\Export.png" />
+    <Image Include="resources\icons\File.png" />
+    <Image Include="resources\icons\Import.png" />
+    <Image Include="resources\icons\lan.png" />
+    <Image Include="resources\icons\lanGreen.png" />
+    <Image Include="resources\icons\Pause.png" />
+    <Image Include="resources\icons\Play.png" />
+    <Image Include="resources\icons\Settings.png" />
+    <Image Include="resources\icons\Stop.png" />
+    <Image Include="resources\icons\Template.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VcpkgRoot)\scripts\buildsystems\msbuild\vcpkg.props" Condition="Exists('$(VcpkgRoot)\scripts\buildsystems\msbuild\vcpkg.props')" />
+  <Import Project="$(VcpkgRoot)\scripts\buildsystems\msbuild\vcpkg.targets" Condition="Exists('$(VcpkgRoot)\scripts\buildsystems\msbuild\vcpkg.targets')" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

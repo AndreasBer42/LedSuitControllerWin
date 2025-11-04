@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/Play.png</file>
+        <file>icons/Pause.png</file>
+        <file>icons/Stop.png</file>
+        <file>icons/File.png</file>
+        <file>icons/Import.png</file>
+        <file>icons/Export.png</file>
+        <file>icons/Settings.png</file>
+        <file>icons/Template.png</file>
+        <file>icons/AddWaypoint.png</file>
+        <file>icons/Distribute.png</file>
+        <file>icons/Bin.png</file>
+        <file>icons/lan.png</file>
+        <file>icons/lanGreen.png</file>
+        <file>icons/man.svg</file>
+    </qresource>
+</RCC>
+
