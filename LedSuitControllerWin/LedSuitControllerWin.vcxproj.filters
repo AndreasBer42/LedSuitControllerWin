@@ -168,5 +168,89 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="vcpkg.json" />
+    <None Include="resources\icons\man.svg" />
+    <None Include="resources\metronomSuit1.json" />
+    <None Include="resources\netronomAllHeads.json" />
+    <None Include="resources\presets.json" />
+    <None Include="resources\spectrogram_techno new.csv" />
+    <None Include="resources\spectrogram_techno.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resources\mono_test_audio.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="resources\mono_test_audio_1000Hz.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="resources\mono_test_audio_metronom.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="resources\mono_test_audio_moon.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="resources\mono_test_audio_survive.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="resources\output.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="resources\test_audio.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="resources\test_audio_techno.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\icons\AddWaypoint.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\Bin.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\DeleteWaypoint.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\Distribute.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\Export.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\File.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\Import.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\lan.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\lanGreen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\Pause.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\Play.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\Settings.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\Stop.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icons\Template.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="resources\resources.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LICENSE.txt" />
   </ItemGroup>
 </Project>
