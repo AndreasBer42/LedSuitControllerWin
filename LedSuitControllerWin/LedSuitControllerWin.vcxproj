@@ -156,12 +156,18 @@
     <QtMoc Include="include\core\TcpClient.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="config\appconfig.json" />
+    <None Include="config\suits.json" />
     <None Include="resources\icons\man.svg" />
     <None Include="resources\metronomSuit1.json" />
     <None Include="resources\netronomAllHeads.json" />
     <None Include="resources\presets.json" />
     <None Include="resources\spectrogram_techno new.csv" />
     <None Include="resources\spectrogram_techno.csv" />
+    <None Include="scripts\build.sh" />
+    <None Include="scripts\esp32scetch\esp32scetch.ino" />
+    <None Include="scripts\plot_spectrogram.py" />
+    <None Include="scripts\run.sh" />
     <None Include="vcpkg.json" />
   </ItemGroup>
   <ItemGroup>
