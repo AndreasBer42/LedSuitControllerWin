@@ -952,7 +952,7 @@ void MainWindow::synchronizeAllDevices() {
         QByteArray goSignal = "GO";
 
         // Broadcast the signal to all devices
-        const QHostAddress broadcastAddress = QHostAddress("192.168.10.255"); // Replace with your network's broadcast address
+        const QHostAddress broadcastAddress = QHostAddress("192.168.105.255"); // Replace with your network's broadcast address
         const quint16 udpPort = 12346; // The port all ESP32 devices are listening on
 
         if (udpSocket.writeDatagram(goSignal, broadcastAddress, udpPort) == -1) {
